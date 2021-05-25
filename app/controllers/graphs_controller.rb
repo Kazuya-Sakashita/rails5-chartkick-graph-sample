@@ -1,7 +1,5 @@
 class GraphsController < ApplicationController
   def index
-      @graph = Graph.all
-binding.pry
-
+      @graph = Graph.group(:time).average(:congestion_level)
   end
 end

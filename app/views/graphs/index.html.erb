@@ -1,6 +1,8 @@
 <h1>Congestion_level graph</h1>
 
-<%= column_chart @graph.pluck(:time, :congestion_level),
+<%= column_chart @graph,
                  id: 'total-attendance-chart',
                  width: '400px',
-                 height: '500px' %>
+                 height: '500px',
+                 xtitle: "Time", 
+                 ytitle: "congestion_level" %>
